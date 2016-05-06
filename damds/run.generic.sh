@@ -1,9 +1,9 @@
 #!/bin/bash
 
 #cores per socket
-cps=12
+cps=1
 #sockets per node
-spn=2
+spn=1
 
 #number of memory maps per node -- the best is to keep at 1
 mmaps=1
