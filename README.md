@@ -18,15 +18,18 @@ Also, this assumes root privileges to setup some of the libraries assuming the n
 2. One time setup (~20-25 min).
     * Create a text file listing node IPs. Let's call this `nodes.txt`.
     * Download the `bootstrap.sh`.
+    * 
       ```
       wget https://raw.githubusercontent.com/DSC-SPIDAL/examples/master/scripts/bootstrap.sh 
       ```
+      
         * Note, if `root` privileges are not available, comment out the following two lines from the `bootstrap.sh`.
             ```
             sudo sed -i "1i 127.0.0.1 $HOSTNAME" /etc/hosts
             sudo bash -c 'echo ssh > /etc/pdsh/rcmd_default'
             ```
     * Execute the following commands.
+    
       ```
       chmod +x bootstrap.sh
       ./bootstrap.sh nodes.txt
@@ -51,9 +54,11 @@ The data used in this example.
 
 
 The following command will start the DA-MDS example
+
 ```
 $HOME/spidal-examples/examples/damds/mmap.run.all.sh nodes.txt 2
 ```
+
 Argument tot he program pare,
 * `nodes.txt` -- the text file containing the node IPs. Note. password-less SSH should be enabled.
 * 2 -- The number of nodes in the nodes.txt.
