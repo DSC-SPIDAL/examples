@@ -13,7 +13,7 @@ download_repo(){
   
   cd ~/
   rm -rf $DEMO_NAME
-  wget https://github.com/esaliya/xsede-demo-2016/archive/master.zip
+  wget https://github.com/DSC-SPIDAL/examples/archive/master.zip
   unzip master.zip
   mv "$DEMO_NAME"-master $DEMO_NAME
   rm -rf master.zip
@@ -39,7 +39,7 @@ if [ -z "$1" ]
   then
     echo "Please provide the path to nodes file"
 else
-  DEMO_NAME=xsede-demo-2016
+  DEMO_NAME=spidal-examples
   NODE_FILE=$1
   MASTER=`cat $NODE_FILE | head -1 $NODEFILE`
 
