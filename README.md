@@ -24,6 +24,7 @@ Also, this assumes root privileges to setup some of the libraries assuming the n
       ```
       
         * Note, if `root` privileges are not available, comment out the following two lines from the `bootstrap.sh`.
+            
             ```
             sudo sed -i "1i 127.0.0.1 $HOSTNAME" /etc/hosts
             sudo bash -c 'echo ssh > /etc/pdsh/rcmd_default'
